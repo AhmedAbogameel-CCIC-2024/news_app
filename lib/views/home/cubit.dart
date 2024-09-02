@@ -15,7 +15,7 @@ class HomeCubit extends Cubit<HomeStates> {
     emit(HomeLoading());
     try {
       final response = await Dio().get(
-        'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=df1a070b89e64ce78ba286cea86af31b',
+        'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=',
       );
       if (response.statusCode == 200) {
         for (var i in response.data['articles']) {
