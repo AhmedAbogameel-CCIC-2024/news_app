@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'core/network_utils/network_utils.dart';
 import 'views/home/view.dart';
 
 void main() {
+  NetworkUtils.init();
   runApp(const MyApp());
 }
 

@@ -61,13 +61,15 @@ class ArticleDetailsView extends StatelessWidget {
                   color: Colors.grey,
                 ),
               ),
-              SizedBox(height: 8),
-              Text(
-                article.source,
-                style: TextStyle(
-                  color: Colors.grey,
+              if (article.source != null) ...[
+                SizedBox(height: 8),
+                Text(
+                  article.source!,
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
                 ),
-              ),
+              ],
               if (article.description != null) ...[
                 Divider(height: 40),
                 Text(article.description!),

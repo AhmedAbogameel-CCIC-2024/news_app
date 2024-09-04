@@ -5,7 +5,7 @@ class Article {
   final String publishedAt;
   final String? description;
   final String? content;
-  final String source;
+  final String? source;
   final String url;
 
   Article({
@@ -27,7 +27,7 @@ class Article {
       publishedAt: json['publishedAt'],
       content: json['content'],
       description: json['description'],
-      source: json['source']['name'],
+      source: json['source']?['name'],
       url: json['url'],
     );
   }
